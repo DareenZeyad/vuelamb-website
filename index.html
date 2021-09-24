@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueLamb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="header-container">
+            <img src="/vuelamb-website/images/menu.png" alt="menu" class="menu-img">
+            <a href="#"> <img src="/vuelamb-website/images/logo.png" alt="VueLamb Logo" class="logo-img"></a>
+
+            <ul>
+                <li><a href="#">latest</a></li>
+                <li><a href="#">modern</a></li>
+                <li><a href="#">contemporary</a></li>
+                <li><a href="#">affordable</a></li>
+            </ul>
+
+            <label class="switch">
+                <input type="checkbox" id="checked" name="checked">
+                <span class="slider"></span>
+            </label>
+        </nav>
+
+        <div class="lamp-container">
+            <img src="/vuelamb-website/images/lamp.png" alt="" class="lamp">
+            <img src="/vuelamb-website/images/light.png" alt="" class="light" id="light">
+        </div>
+        
+        <div class="content">
+            <h1>Latest in Lighting</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe officiis atque dolorem neque, 
+                incidunt natus exercitationem, adipisci pariatur iste magnam sunt quas enim.</p>
+            <a href="#" class="button">Check All Collections</a>
+        </div>
+
+    </div>
+
+    <script>
+        const cb = document.querySelector('#checked');
+        console.log(cb.checked);
+        cb.onclick = () => {
+            const result = cb.checked;
+            const light = document.getElementById('light');
+            if(result){
+                light.classList.add("light-checked");
+            }
+            else{
+                light.classList.remove("light-checked");
+            }
+        };
+    </script>
+</body>
+</html>
